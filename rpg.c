@@ -293,7 +293,7 @@ int main()
 		{
 			printf("あなたはどうする?\n");
 	
-			sentaku_max = (level+1); 
+			sentaku_max = (level < 2) ? 3 : (level+1); 
 			if(level > WAZA_MAX)
 			{
 				sentaku_max = WAZA_MAX;
@@ -875,7 +875,7 @@ int printShikaku(int argc,char *argv[])
 	{
 		argc -= 1;
 	}*/
-	for(i=0;i < argc-1;i++)/*前条件i<(argc < 8 ? argc - 2:argc)*/
+	for(i=0;i < argc;i++)/*前条件i<(argc < 8 ? argc - 2:argc)*/
 	{
 //		printf("strlen:%d\n",strlen(argv[i])/3*2);
 		printf("* %d:%s",i,argv[i]);
